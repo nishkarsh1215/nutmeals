@@ -1,0 +1,23 @@
+/* App.css or your preferred CSS file */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 25px;
+  background-color: rgb(252, 201, 117);
+  color: 'black';
+  overflow: hidden;
+}
+
+.options {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.option {
+  text-align: center;
+  size: 6px;
+  margin: 0 30px;
+  font-size: 12px;
+}
