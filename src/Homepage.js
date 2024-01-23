@@ -13,7 +13,8 @@ function Homepage() {
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true, // Enable automatic sliding
-    autoplaySpeed: 3000, // Set the interval between slides (in milliseconds)
+    autoplaySpeed: 1000, // Set the interval between slides (in milliseconds)
+    vertical: true,
   }
   return (
     <>
