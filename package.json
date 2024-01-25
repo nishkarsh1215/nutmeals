@@ -17,6 +17,8 @@
     "react-scripts": "5.0.1",
     "react-scroll-parallax": "^3.4.5",
     "react-slick": "^0.29.0",
+    "react-spring": "^9.7.3",
+    "react-with-gesture": "^4.0.8",
     "slick-carousel": "^1.8.1",
     "web-vitals": "^2.1.4"
   },

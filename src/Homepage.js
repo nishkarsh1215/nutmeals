@@ -1,25 +1,47 @@
-import * as React from 'react'
-import Navbar from './Navbar'
+import React, { useEffect, useRef } from 'react'
 import Slider from 'react-slick'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
-import './Carousel.css' // Import your custom styles
+import './Carousel.css'
 
 function Homepage() {
+  const sliderRef = useRef(null)
+
   const settings = {
     dots: true,
     infinite: true,
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay: true, // Enable automatic sliding
-    autoplaySpeed: 1000, // Set the interval between slides (in milliseconds)
+    autoplay: true,
+    autoplaySpeed: 1000,
     vertical: true,
   }
+
+  const handleScroll = (event) => {
+    const { deltaY } = event
+
+    if (deltaY > 0) {
+      // Scrolled down, go to the next slide
+      sliderRef.current.slickNext()
+    } else if (deltaY < 0) {
+      // Scrolled up, go to the previous slide
+      sliderRef.current.slickPrev()
+    }
+  }
+
+  useEffect(() => {
+    window.addEventListener('wheel', handleScroll)
+
+    return () => {
+      window.removeEventListener('wheel', handleScroll)
+    }
+  }, [])
+
   return (
     <>
       <div className="carousel-container">
-        <Slider {...settings}>
+        <Slider ref={sliderRef} {...settings}>
           <div>
             <img src="./images/firsthead.png" alt="Slide 1" />
           </div>

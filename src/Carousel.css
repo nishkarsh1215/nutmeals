@@ -81,10 +81,16 @@ div {
 }
 
 .slick-dots {
-  bottom: 20px; /* Adjust the distance from the bottom as needed */
-  color: yellow;
+  bottom: 30px;
+  color: yellow; /* Set the color of the dots to white or any other color that contrasts with your background */
+}
+
+.slick-dots li button {
+  font-size: 100px; /* Adjust the font size if needed */
+
+  opacity: 0.7; /* Adjust the opacity of inactive dots */
 }
 
 .slick-dots li.slick-active button {
-  opacity: 1; /* Adjust the opacity for the active dot if needed */
+  opacity: 1;
 }

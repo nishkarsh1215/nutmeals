@@ -12,6 +12,7 @@ import ReactDOM from 'react-dom/client'
 import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom'
 import Front from './Front'
 import Shopfront from './Shopfront'
+import ScrollComponent from './ScrollComponent'
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Front />} />
           <Route path="/shop" element={<Shopfront />} />
+          <Route path="/scroll" element={<ScrollComponent />} />
         </Routes>
       </BrowserRouter>
     </>
